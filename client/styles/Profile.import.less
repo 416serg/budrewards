@@ -1,0 +1,119 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
+}
+
+section.profile {
+  position: relative;
+  padding: 0;
+}
+
+.user-about {
+  padding: 50px 0 0 0;
+  color: #901D19;
+  h4 {
+    margin: 5px 0;
+  }
+  p {
+    margin-bottom: 5px;
+  }
+  .thank-you {
+    margin-top: 30px;
+  }
+  hr {
+    margin: 10px auto;
+    width: 40px;
+    border-top: 2px solid #901D19;
+  }
+}
+
+.confirm-profile {
+  .legal {
+    color: #901D19;
+  }
+}
+
+.container-profile {
+  width: 100%;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  padding-bottom: 1.5em;
+}
+.bg {
+  border-bottom: 8px solid #fff; width: 100%;}
+
+.bio:hover > .desc {
+  cursor: pointer;
+  opacity: 1; }
+
+.avatarcontainer {
+  position: absolute;
+  bottom: -34px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 85px;
+  height: 85px;
+  display: block; }
+  .avatarcontainer:hover > .hover {
+    opacity: 1; }
+
+.avatar {
+  width: 100%;
+  border: 8px solid #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative; 
+}
+  .avatar img {
+    width: 65px;
+    height: 65px; 
+}
+  .avatar:hover + .hover {
+    opacity: 1;
+    cursor: pointer; 
+  }
+
+.friend-list {
+  padding-top: 0px;
+  h3 {
+    color: #901D19;
+  }
+
+}
+
+.confirm {
+    position: fixed;
+    bottom: 0;
+    background-color: #901D19;
+    padding: 15px 10px;
+    width: 100%;
+  }
+
+.search-bar {
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #fff;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+     color:    #fff;
+     opacity:  1;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+     color:    #fff;
+     opacity:  1;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+     color:    #fff;
+  }
+  :placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+    color:    #fff;
+  }
+}
