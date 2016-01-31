@@ -28,6 +28,15 @@ CheckingOut = React.createClass({
       muiTheme: ThemeManager.getMuiTheme(LightRawTheme)
     };
   },
+  goDashboard() {
+    FlowRouter.go('dashboard');
+  },
+  goFail() {
+    FlowRouter.go('fail');
+  },
+  goPass() {
+    FlowRouter.go('pass');
+  },
   render() {
     return (
       <div>
@@ -52,9 +61,9 @@ CheckingOut = React.createClass({
             
             <div className="row" style={{paddingTop: '50px'}}>
               <div className="col-xs-12 text-center">
-                <RaisedButton label="Pass Case" secondary={true} onTouchTap={FlowRouter.go('pass')} style={fbstyle} labelStyle={fblabel} fullWidth={true} backgroundColor="transparent"/>
-                <RaisedButton label="Fail Case" onTouchTap={FlowRouter.go('fail')} secondary={true} style={fbstyle} labelStyle={fblabel} fullWidth={true} backgroundColor="transparent"/>
-                <p style={{marginTop: '50px'}}><a onTouchTap={FlowRouter.go('dashboard')} style={{color: '#fff'}}>Back to Dashboard</a></p>
+                <RaisedButton label="Pass Case" secondary={true} onTouchTap={this.goPass} style={fbstyle} labelStyle={fblabel} fullWidth={true} backgroundColor="transparent"/>
+                <RaisedButton label="Fail Case" onTouchTap={this.goFail} secondary={true} style={fbstyle} labelStyle={fblabel} fullWidth={true} backgroundColor="transparent"/>
+                <p style={{marginTop: '50px'}}><a onTouchTap={this.goDashboard} style={{color: '#fff'}}>Back to Dashboard</a></p>
               </div>
             </div>
           </div>

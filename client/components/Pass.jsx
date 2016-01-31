@@ -28,6 +28,9 @@ Pass = React.createClass({
       muiTheme: ThemeManager.getMuiTheme(LightRawTheme)
     };
   },
+  goDashboard() {
+    FlowRouter.go('dashboard');
+  },
   render() {
     return (
       <div>
@@ -62,7 +65,7 @@ Pass = React.createClass({
                 <RaisedButton label="Take a Picture" secondary={true} style={fbstyle} labelStyle={fblabel} fullWidth={true} backgroundColor="transparent"/>
                 <RaisedButton label="Share Your Story" secondary={true} style={fbstyle} labelStyle={fblabel} fullWidth={true} backgroundColor="transparent"/>
                 <RaisedButton label="Map My Way Home" secondary={true} style={fbstyle} labelStyle={fblabel} fullWidth={true} backgroundColor="transparent"/>
-                <p className="text-center" style={{marginTop: '50px'}}><a onTouchTap={FlowRouter.go('dashboard')} style={{color: '#fff'}}>Back to Dashboard</a></p>
+                <p className="text-center" style={{marginTop: '50px'}}><a onTouchTap={this.goDashboard} style={{color: '#fff'}}>Back to Dashboard</a></p>
               </div>
             </div>
           </div>

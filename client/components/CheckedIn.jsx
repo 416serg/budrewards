@@ -46,6 +46,12 @@ CheckedIn = React.createClass({
   handleClose() {
     this.setState({open: false});
   },
+  goFail() {
+    FlowRouter.go('fail')
+  },
+  goCheckingOut() {
+    FlowRouter.go('checkingOut')
+  },
   render() {
     const actions = [
       <FlatButton
@@ -97,8 +103,8 @@ CheckedIn = React.createClass({
               <div className="col-xs-12">
                 <div className="text-center">
                   <RaisedButton label="Ping Friends" secondary={true} disabled={false} style={fbstyle} labelStyle={fblabel} fullWidth={true} onTouchTap={this.openDialog} backgroundColor="transparent"/>
-                  <RaisedButton label="We're Leaving" secondary={true} onTouchTap={FlowRouter.go('checkingOut')} disabled={false} style={fbstyle} labelStyle={fblabel} fullWidth={true} backgroundColor="transparent"/>
-                  <p style={{marginTop: '50px'}}><a onTouchTap={FlowRouter.go('fail')} style={{color: '#fff'}}>Cancel Plans</a></p>
+                  <RaisedButton label="We're Leaving" secondary={true} onTouchTap={this.goCheckingOut} disabled={false} style={fbstyle} labelStyle={fblabel} fullWidth={true} backgroundColor="transparent"/>
+                  <p style={{marginTop: '50px'}}><a onTouchTap={this.goFail} style={{color: '#fff'}}>Cancel Plans</a></p>
                 </div>
               </div>
             </div>

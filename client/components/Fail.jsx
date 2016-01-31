@@ -28,6 +28,9 @@ Fail = React.createClass({
       muiTheme: ThemeManager.getMuiTheme(LightRawTheme)
     };
   },
+  goDashboard() {
+    FlowRouter.go('dashboard');
+  },
 	render() {
 		return (
       <div>
@@ -61,7 +64,7 @@ Fail = React.createClass({
               <div className="col-xs-12">
                 <RaisedButton label="Call an Uber" secondary={true} style={fbstyle} labelStyle={fblabel} fullWidth={true} backgroundColor="transparent"/>
                 <RaisedButton label="Call a Friend" secondary={true} style={fbstyle} labelStyle={fblabel} fullWidth={true} backgroundColor="transparent"/>
-                <p className="text-center" style={{marginTop: '50px'}}><a onTouchTap={FlowRouter.go('dashboard')} style={{color: '#fff'}}>Back to Dashboard</a></p>
+                <p className="text-center" style={{marginTop: '50px'}}><a onTouchTap={this.goDashboard} style={{color: '#fff'}}>Back to Dashboard</a></p>
               </div>
             </div>
           </div>

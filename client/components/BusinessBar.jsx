@@ -45,11 +45,14 @@ BusinessBar = React.createClass({
   handleToggle() {
   	this.setState({open: !this.state.open});
   },
+  goDashboard() {
+    FlowRouter.go('dashboard');
+  },
 	render() {
 		return (
 			<Toolbar style={toolbarStyle}>
         <ToolbarGroup firstChild={true} float="left">
-          <IconButton iconClassName="fa fa-chevron-left" iconStyle={fontAwesome}/>
+          <IconButton onTouchTap={this.goDashboard} iconClassName="fa fa-chevron-left" iconStyle={fontAwesome}/>
         </ToolbarGroup>
         <ToolbarGroup float="right">
           <AutoComplete
